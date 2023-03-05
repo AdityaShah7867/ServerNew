@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+
+<div class="container mt-5 ">
+    <div class="row row d-flex justify-content-center align-items-center">
+
+<div class="card">
+    <div class="card-info">
+      <p class="title">Aditya Shah</p>
+      <p class="subtitle">Web Dev</p>
+    </div>
+    <div class="card-bio">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-info">
+      <p class="title">Rehman Khan</p>
+      <p class="subtitle">Web Dev</p>
+    </div>
+    <div class="card-bio">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+
+{% endblock %}

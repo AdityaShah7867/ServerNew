@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+    
+<div class="container notesCnt mt-4">
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="container-lg-6">
+            {% include 'components/search.html' %}
+            
+        </div>
+
+        {% include 'components/filter.html' %}
+    
+        
+    </div>
+    
+    <div class="row d-flex justify-content-center align-items-center">
+        
+        {% for x in notes %}
+        <div class="card mt-4 mx-4" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{x.sub}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{x.typeN}}</h6>
+                <p class="card-text">Credit : {{x.author}}</p>
+                <a href="{{x.slug}}" class="card-link">View PDF</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+ 
+</div>
+{% include 'components/notesBottomNav.html' %}
+
+{% endblock %}
