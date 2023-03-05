@@ -14,10 +14,16 @@ urlpatterns = [
     path('aboutus/',views.aboutUs,name='about'),
     path('register/',views.registerR,name='register'),
     path('teacher/',views.teacher,name='teacher'),
+
     path('btmNav/',views.btmNav,name='btmNav'),
     path('btmNav/<slug:slug>',views.noteViewer,name='btmNav'),
+
     path('referenceBooks/',views.refeBk,name='referenceBooks'),
+    path('referenceBooks/<slug:slug>',views.noteViewer,name='ref'),
+
     path('pyq/',views.pyqA,name='pyqA'),
+    path('pyq/<slug:slug>',views.noteViewer,name='pyqq'),
+
     path('searchRecmd/',views.searchRecmd,name='searchRecmd')
 
 ]
